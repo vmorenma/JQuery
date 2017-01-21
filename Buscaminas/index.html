@@ -5,57 +5,7 @@
 		<title>Document</title>
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 		<link href="css/estil.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript">
-			var ground = [];
-			var dificultad= '';
-			$(function(){
-				
-				$('button#btnprint').click(function(){
-					var s="";
-					dificultad=$('select').val();
-					if (ground!= undefined){
-						for (i=0;i<dificultad;i++){
-							for (j=0;j<dificultad;j++){
-								s+=ground[i][j]+"  ";
-							}
-							s+="\n";
-						}
-						console.log(s);				
-					}
-				});
-
-				$('button#btngenerate').click(function(){
-
-					dificultad=$('select').val();
-					console.log(dificultad);
-					for (var i=0; i<dificultad;i++){
-						ground[i]=[];
-						for(var j=0; j<dificultad;j++){
-							ground[i][j]=Math.trunc(Math.random()*10);
-							if (ground[i][j]>0 && ground[i][j]<9){
-								ground[i][j]=-8  
-							}else{
-								ground[i][j]=-9// -9 MINA NO VISTA 
-							}
-						}
-					}
-					var table= document.getElementById("fieldtable");
-					table.innerHTML='';
-					for (var i=0;i<dificultad;i++){
-						var row=table.insertRow(i);
-						for(var j=0;j<dificultad;j++){
-							var cell=row.insertCell(j);
-							if(ground[i][j]==-8){
-								cell.innerHTML="<img class='cuadrado'>";
-							}else{
-								cell.innerHTML="<img class='bomba'>";
-							}
-						}
-					}
-				});		
-			});
-
-		</script>
+		<script type="text/javascript" src="js/buscaminas.js"></script>
 
 	</head>
 	<body>

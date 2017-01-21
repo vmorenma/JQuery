@@ -16,47 +16,52 @@
 	height:20px;
 	content:url('../img/mina.png');
 }
+.cero{
+	width: 20px;
+	height:20px;
+	background-image: url('../img/Minesweeper_0.gif');
+}
 .uno{
 	width: 20px;
 	height:20px;
-	background-image: url('../img/Minesweeper_1');
+	background-image: url('../img/Minesweeper_1.gif');
 }
 
 .dos{
 	width: 20px;
 	height:20px;
-	background-image: url('../img/Minesweeper_2');
+	background-image: url('../img/Minesweeper_2.gif');
 }
 
 .tres{
 	width: 20px;
 	height:20px;
-	background-image: url('../img/Minesweeper_3');
+	background-image: url('../img/Minesweeper_3.gif');
 }
-.quatro{
+.cuatro{
 	width: 20px;
 	height:20px;
-	background-image: url('../img/Minesweeper_4');
+	background-image: url('../img/Minesweeper_4.gif');
 }
 .cinco{
 	width: 20px;
 	height:20px;
-	background-image: url('../img/Minesweeper_5');
+	background-image: url('../img/Minesweeper_5.gif');
 }
 .seis{
 	width: 20px;
 	height: 20px;
-	background-image: url('../img/Minesweeper_6');
+	background-image: url('../img/Minesweeper_6.gif');
 }
 .siete{
 	width: 20px;
 	height: 20px;
-	background-image: url('../img/Minesweeper_7');
+	background-image: url('../img/Minesweeper_7.gif');
 }
 .ocho{
 	width: 20px;
 	height: 20px;
-	background-image: url('../img/Minesweeper_8');
+	background-image: url('../img/Minesweeper_8.gif');
 }
 .header{
 	height: 50px;
