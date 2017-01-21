@@ -55,16 +55,30 @@ $(function(){
 			}
 			$table.append($row);
 		}
-		$(this).addClass('win');
-		$(this).removeClass('begin');
-		$(this).addClass('begin');
+		$(this).removeClass('gameover');
 		$(this).removeClass('win');
+		$(this).addClass('begin');
 	});
-	$('body').on('click','img.cuadrado_bomba',function(){
-		console.log('CLICK BOMBA!');				
-		$(this).addClass('bomba2');
-		$(this).removeClass('cuadrado_bomba');
 
+	$('body').on('mousedown','img.cuadrado_bomba',function(event){
+		switch(event.which){
+			case 1:
+
+				$(this).addClass('bomba2');
+				$(this).removeClass('cuadrado_bomba');
+				$('img#beginbutton').addClass('gameover');
+				$('img#beginbutton').removeClass('begin');
+				break;
+
+			case 2:
+				$(this).addClass('flag');
+				$(this).removeClass('cuadrado_bomba');
+				break;
+			case 3:
+				break;
+			default:
+				alert('Nice Mouse!');
+		}
 	});
 
 	$('body').on('click','img.cuadrado',function(){

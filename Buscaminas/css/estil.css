@@ -95,3 +95,8 @@
 	background-image: url('../img/flag.png');
 	background-position: center;
 }
+.gameover{
+	height: 50px;
+	width: 50px;
+	background-image: url('../img/lost.gif');
+}
