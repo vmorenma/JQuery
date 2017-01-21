@@ -16,7 +16,7 @@ $(function(){
 			console.log(s);				
 		}
 	});
-	$('button#btngenerate').click(function(){
+	$('img#beginbutton').click(function(){
 		dificultad=$('select').val();
 		console.log(dificultad);
 		for (var i=0; i<dificultad;i++){
@@ -48,18 +48,22 @@ $(function(){
 				if(ground[i][j]==-8){
 					$img=$("<img x='"+i+"'y='"+j+"' class='cuadrado'/>");
 				}else{
-					$img=$("<img x='"+i+"'y='"+j+"' class='bomba'/>");
+					$img=$("<img x='"+i+"'y='"+j+"' class='cuadrado_bomba'/>");
 				}
 				$cell.append($img);
 				$row.append($cell);
 			}
 			$table.append($row);
 		}
+		$(this).addClass('win');
+		$(this).removeClass('begin');
+		$(this).addClass('begin');
+		$(this).removeClass('win');
 	});
-	$('body').on('click','img.bomba',function(){
+	$('body').on('click','img.cuadrado_bomba',function(){
 		console.log('CLICK BOMBA!');				
 		$(this).addClass('bomba2');
-		$(this).removeClass('bomba');
+		$(this).removeClass('cuadrado_bomba');
 
 	});
 
